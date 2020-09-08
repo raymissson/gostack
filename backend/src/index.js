@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+
  const { uuid, isUuid } = require('uuidv4');
 
 // aplicação criada
 const app = express();
-
+// permite que qualquer front acesse 
+app.use(cors());
 // receber parâmetros do tipo json
 app.use(express.json());
 
